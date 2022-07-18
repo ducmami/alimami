@@ -1,0 +1,39 @@
+plugins {
+	id 'java-library'
+}
+
+group = 'vn.gobiz.justice'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/snapshot' }
+	maven { url 'https://repo.spring.io/milestone' }
+
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+dependencies {
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+
+	implementation 'com.playtika.reactivefeign:feign-reactor-spring-cloud-starter:3.2.1'
+	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.1'
+
+	implementation 'org.springframework.data:spring-data-commons:2.7.1'
+	implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+compileJava {
+	options.encoding = 'UTF-8'
+}
+
+javadoc {
+	options.encoding = 'UTF-8'
+}
