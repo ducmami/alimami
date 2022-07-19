@@ -21,6 +21,9 @@ configurations {
 dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.24'
 
+	implementation 'com.alibaba:fastjson:1.2.83'
+	implementation 'commons-logging:commons-logging:1.2'
+
 	implementation 'com.playtika.reactivefeign:feign-reactor-spring-cloud-starter:3.2.1'
 	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.1'
 
